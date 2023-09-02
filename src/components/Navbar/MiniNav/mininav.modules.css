@@ -1,0 +1,27 @@
+.mininav{
+    font-size: 15px;
+    background-color:#232F3E;
+    color: #fff;
+    display: flex;
+    gap:12px;
+    padding: 12px 0px 12px 25px;
+}
+
+.lftNav{
+    
+    display: flex;
+    font-weight: 500
+}
+
+.centerNav{
+    padding-left:5px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rghtNav{
+    padding-left: 122px;
+    
+}

@@ -1,0 +1,36 @@
+.lang{
+    width:4%;
+    display:flex;
+    align-items: center;
+    gap: 1px;
+    /* justify-content: space-between; */
+    /* padding: 5px; */
+
+}
+
+ 
+
+.lang img{
+    margin-top: 1px;
+    font-size: 12px;
+    width: 24%;
+    height: 21.5%;
+}
+
+
+ 
+ .drpdwn select{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    /* appearance: none; */
+    cursor: pointer;
+ }
+
+ .lang select option{
+    font-weight: 700;
+    color: black;
+    
+    background-color:white;
+ }
