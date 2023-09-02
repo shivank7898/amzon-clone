@@ -5,6 +5,9 @@
     display: flex;
     gap:12px;
     padding: 12px 0px 12px 25px;
+    /* margin-top: 58px; */
+    /* position: fixed;     */
+    /* z-index: 1; */
 }
 
 .lftNav{

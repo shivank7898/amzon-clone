@@ -6,11 +6,15 @@ import Home from './components/Home/Home'
 const App = () => {
   return (
     <div className='App'>
+      
         <Navbar />
         <MiniNav />
-        <main>
+
+        <div className={styles.main}>
           <Home />
-        </main>
+        </div>
+         
+         
     </div>
   )
 }

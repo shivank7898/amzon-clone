@@ -1,6 +1,6 @@
 export const bannerData = [
-    { id: 1, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50' },
-    { id: 2, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/57267a180af306fe.jpg?q=50' },
-    { id: 3, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/ae9966569097a8b7.jpg?q=50' },
-    { id: 4, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/f6202f13b6f89b03.jpg?q=50' }
+    { id: 1, url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/Unrec/R1/D91435399_WLA-BAU-Unrec-Hero_DesktopTallHero_3000x1200_2._CB597781013_.jpg' },
+    { id: 2, url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/ATF/Skincare-PCzzz._CB597786106_.jpg' },
+    { id: 3, url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg' },
+    { id: 4, url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img22/wearables/BAU_GW/Tall_Hero_3000X1200_BAU._CB596910925_.jpg' }
 ]
