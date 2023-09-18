@@ -1,0 +1,232 @@
+.container{
+    position: relative;
+    /* z-index: 1; */
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin:-210px 0px ;
+    padding: 0px 20px 0px 20px;
+}
+
+
+.row1{
+    /* z-index: 1; */
+    display: flex;
+    /* flex:wrap ; */
+    /* flex-wrap: wrap; */
+    gap: 60px;
+    width: 100%;
+    /* margin-bottom:100px ; */
+}
+.card{
+    cursor: pointer;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    /* padding: 10px; */
+    background-color:white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    
+}
+
+.card p{
+     
+    margin-left: 9px;
+    padding: 15px;
+    font-size: larger;
+    /* font-weight: 600 */
+}
+
+.card img{
+    border-radius:5px 5px 0px 0px  ;
+    margin: 23px;
+    width: 85%;
+}
+ 
+.card span{
+
+    margin-left: 9px;
+    padding: 15px;
+    font-size: medium;
+    color: blue;
+}
+
+.card span:hover{
+    text-decoration: underline;
+
+}
+
+.card .category{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    padding-right: 9%;
+}
+
+.card .rewards{
+    padding-right: 9%;
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+ 
+ 
+ 
+
+.card button{     
+    padding: 9px;
+    margin: 0px 18px;
+    width:90%;
+    background-color: #f1c964!important;
+    border: 1px solid #a88733!important;
+    color: #232f3e!important;
+    border-radius: 5px;
+    font-size: large; 
+}
+
+.row2{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
+    background-color: white;
+    width:100% ;
+    /* padding: 20px; */
+
+}
+
+ 
+.row2 img{
+    display: flex;
+    align-items: center;
+    margin:20% 40% 0px;
+    width: 20%;
+}
+
+.row2 p{
+    font-size: 22px;
+    margin: 20px;
+}
+
+.row2 span{
+    font-size: medium;
+    color: blue;
+}
+
+.slider{
+    /* display: flex; */
+
+    /* margin-left:1% ; */
+    width: 100%;
+    /* height: 250px; */
+}
+    
+.slider .slickCard{
+    padding: 12px;
+    width: auto;
+    height: 280px;
+    /* background-color: #232f3e; */
+}
+
+.slider  img {
+    padding: 20px;
+    margin-left: 17%;
+    margin-top: 10%;
+    width:auto;
+    height:70%;
+}
+
+.slider .image{
+    /* padding: 12px; */
+    display: flex;
+    gap: 1200px;
+}
+ 
+
+
+.row3{
+    /* z-index: 1; */
+    display: flex;
+    /* flex:wrap ; */
+    /* flex-wrap: wrap; */
+    gap: 60px;
+    width: 100%;
+    /* margin-bottom:100px ; */
+}
+
+
+.row3 .card2{
+    cursor: pointer;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    /* padding: 10px; */
+    background-color:white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 6px;
+    
+}
+
+.row3 .card2 p{
+    /* margin-bottom: 1px; */
+    margin-left: 9px;
+    padding: 15px;
+    font-size: larger;
+}
+
+.row3  img{
+    border-radius:5px 5px 0px 0px  ;
+    margin-left: 35px;
+    margin-bottom: 12px;
+    width: 75%;
+}
+ 
+.card2 span{
+    padding: 12px;
+    margin-left: 20px;
+    padding: 15px;
+    font-size: medium;
+    color: blue;
+}
+
+.card2 span:hover{
+    text-decoration: underline;
+
+}
+
+.card2 .category{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    padding-right: 9%;
+}
+
+.card2 .rewards{
+    padding-right: 9%;
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+ 
+ 
+ 
+
+.card button{     
+    padding: 9px;
+    margin: 0px 18px;
+    width:90%;
+    background-color: #f1c964!important;
+    border: 1px solid #a88733!important;
+    color: #232f3e!important;
+    border-radius: 5px;
+    font-size: large; 
+}
+
+
+.spanBottom{
+    /* background-color: #232f3e; */
+    /* margin-bottom: 12px; */
+    padding-bottom: 12px;
+}

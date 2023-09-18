@@ -14,10 +14,13 @@ header{
   margin: 0;
 }
 
- .main{
-  /* margin: auto; */
-   
-  margin-top: 100px;
-  height: 968px;
-  background-color: aqua;
- }
+ 
+
+main{
+  margin:0px 0px 230px 0px;
+}
+ 
+a{
+  text-decoration: none;
+  color: black;
+}

@@ -7,7 +7,8 @@
     gap: 18px;
     padding: 5px;
     position: sticky;
-    z-index: 1;
+    top: 0%;
+    z-index: 111111;
 }
 
 
@@ -91,13 +92,19 @@
 
 
 .sign{
+    /* cursor: pointer; */
+    color: white!important;
+    width: 110%;
     display: flex;
     line-height: 8px;
     flex-direction: column;
-    font-weight: 700
+    font-weight: 00
 }
 
+
+
 .sign-frst{
+    color: white;
     font-size: 13px;
     font-weight: 500;
     /* color: #b5b3c4; */
@@ -105,8 +112,13 @@
     
 }
  
+.sign-scnd{
+    font-weight: 700;
+    color: white;
+}
 
 .rtrn{
+    width: 110%;
     display: flex;
     line-height: 8px;
     flex-direction: column;
@@ -114,12 +126,18 @@
 }
 
 .rtrn-frst{
+    color: white;
     font-size: 13px;
     font-weight: 500;
     /* color: #b5b3c4; */
     /* padding-left: 18px; */
     
 }
+
+.rtrn-scnd{
+    color: white;
+}
+
 
 .cartIcon{
     display: flex;

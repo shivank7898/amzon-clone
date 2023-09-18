@@ -1,0 +1,133 @@
+.signInCont{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    min-height: 968px;
+}
+.signInCont .img{
+    padding-left: 46.5%;
+    /* height: 5%; */
+    /* width: 2%; */
+}
+
+.signInCont img{
+    /* margin: auto; */
+    width: 13%;
+} 
+
+.signInCont box{
+    padding: 25px;
+    border: 1px #ddd solid;
+    border-radius: 8px;    
+    width: 19%;
+    /* height: 90%; */
+    gap: 19px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+}
+
+box .cont1{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cont1 p{
+        font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2
+    /* font-size: 30px; */
+}
+
+.cont1 label{
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.cont1 input{
+    color: #0F1111;
+    width: 100%;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+
+.cont2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cont2 button{
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+    background: #FFD814;
+    border-color: #FCD200;
+    width: 100%!important;
+    color: #111;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    padding: 10px;
+}
+
+.cont2 p{
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+
+.cont2 span{
+    color:  #0066c0
+}
+
+.new {
+    padding: 15px;
+    font-size: small;
+    color: #8f8f8f;
+    display: grid;
+    grid-template-columns: 120px max-content 120px;
+    grid-column-gap: 5px;
+    align-items: center;
+}
+
+
+.new::before,
+.new::after {
+    content: "";
+    display: block;
+    height: 0.1px;
+    background-color: #eee7e7;
+}
+
+.signInCont .newCountBtn{
+    box-shadow: 1px 1px 4px rgb(216, 210, 210);
+    border-radius: 8px;
+    border: 1px solid #c0babaad; 
+    background-color:rgb(255, 252, 252);
+    padding: 9px;
+    width: 100%;
+    margin: 5px 166px 0px 0px;
+    color: #111;
+    /* cursor: pointer; */
+}
+
+.nameError{
+  font-size: 1px;
+}

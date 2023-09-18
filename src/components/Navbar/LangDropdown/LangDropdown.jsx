@@ -5,9 +5,7 @@ const LangDropdown = () => {
   const [] =useState(false)
   return (
     <div className='lang'>
-      {/* <div className="flag"> */}
         <img src="./images/flag.png" alt="" />
-      {/* </div> */}
        
       <div className="drpdwn">
         <select name="" id="">

@@ -4,27 +4,30 @@
     color: #fff;
     display: flex;
     gap:12px;
-    padding: 12px 0px 12px 25px;
+    padding: 12px 10px 12px 25px;
     /* margin-top: 58px; */
     /* position: fixed;     */
     /* z-index: 1; */
 }
 
 .lftNav{
-    
+    width: 5%;
     display: flex;
     font-weight: 500
 }
 
 .centerNav{
+    width:70%;
     padding-left:5px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     font-size: 14px;
     font-weight: 600;
 }
 
 .rghtNav{
-    padding-left: 122px;
+    /* margin-left:1px ; */
+    font-size: 14px;
+    padding-left: 70px;
     
 }

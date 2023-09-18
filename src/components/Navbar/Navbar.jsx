@@ -2,13 +2,31 @@ import { IoLocationOutline, IoSearch} from "react-icons/io5";
 import { PiShoppingCartSimpleThin } from "react-icons/pi"
 import styles from './navbar.modules.css'
 import LangDropdown from "./LangDropdown/LangDropdown";
-import MiniNav from "./MiniNav/MiniNav";
-
+// import { auth } from "../../firebase";
+import { Link,useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux"
+import { auth } from "../../firebase";
 const Navbar = () => {
+  const navigate = useNavigate()
+  const name = useSelector((state) => state.name.name)
+
+  const signOutUser = () => {
+    console.log(auth.currentUser);
+          auth.signOut()
+          .then(() =>{
+            
+            console.log("User sign out successfully")
+          }).catch((error) => {
+            console.log("Error during sign out")
+          })
+  }
+
   return (
-      <div className="nav">      
+      <div className="nav">     
         <div className="image">
+      <Link to={'/'}>
             <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />     
+      </Link> 
         </div>
         
         <div className="address">
@@ -44,15 +62,23 @@ const Navbar = () => {
           <LangDropdown />        
         </>
 
-        <div className="sign">
-          <span className='sign-frst'>Hello,sign in</span> <br />
-          <span className='sign-scnd'>Accounts & Lists</span>
-        </div>
         
-        <div className="rtrn">
-          <span className='rtrn-frst'>Returns</span> <br />
-          <span className='rtrn-scnd'>& Orders</span>
-        </div>
+          
+          <Link to={ !auth.currentUser ? "/signIn" : "" }>
+              <div className='sign' onClick={ auth.currentUser ? signOutUser : () => navigate("/signIn") }>
+                <span className='sign-frst' >Hello,  {auth.currentUser  ? name : "Guest"}</span> <br />
+              
+                <span className="sign-scnd">{!auth.currentUser ? "Sign In" : "Sign Out"} </span>
+               </div>
+          </Link>
+             
+         
+        <Link to={'/'}>
+          <div className="rtrn">
+            <span className='rtrn-frst'>Returns</span> <br />
+            <span className='rtrn-scnd' >& Orders</span>
+          </div>
+        </Link>
         
         <div className="cart">
           <div className="cartIcon">
