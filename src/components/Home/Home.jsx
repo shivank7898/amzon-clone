@@ -1,5 +1,5 @@
 import { fetchProducts } from '../../redux/slice/products';
-import Shopsection from '../Shopsection/ShopSection';
+import Shopsection from './Shopsection/ShopSection';
 import Poster from './Poster/Poster'
 import styles from './home.module.css'
 import { useEffect } from 'react';

@@ -140,6 +140,7 @@
 
 
 .cartIcon{
+    color: #ffff;
     display: flex;
     /* width: 12%; */
     font-size: 30px;

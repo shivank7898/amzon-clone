@@ -6,9 +6,12 @@ import LangDropdown from "./LangDropdown/LangDropdown";
 import { Link,useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux"
 import { auth } from "../../firebase";
+import { selectCartCount } from "../../store/store";
 const Navbar = () => {
   const navigate = useNavigate()
   const name = useSelector((state) => state.name.name)
+  const cartCount = useSelector(selectCartCount);
+
 
   const signOutUser = () => {
     console.log(auth.currentUser);
@@ -59,7 +62,7 @@ const Navbar = () => {
         </div>
 
         <>
-          <LangDropdown />        
+          <LangDropdown />     
         </>
 
         
@@ -79,16 +82,17 @@ const Navbar = () => {
             <span className='rtrn-scnd' >& Orders</span>
           </div>
         </Link>
-        
+        <Link to={'/cart'}>
         <div className="cart">
           <div className="cartIcon">
             <PiShoppingCartSimpleThin />
             <div className="cartText">
-              <p>0</p>
+              <p>{cartCount}</p>
               <p id="cart">Cart</p>
             </div>
           </div>
         </div> 
+        </Link>
       </div>
       
     
