@@ -5,7 +5,7 @@ const LangDropdown = () => {
    
   return (
     <div className='lang'>
-        <img src="./images/flag.png" alt="" />
+        <img src="../images/flag.png" alt="gkhfhg" />
        
       <div className="drpdwn">
         <select name="" id="">

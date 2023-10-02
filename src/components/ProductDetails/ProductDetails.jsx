@@ -12,7 +12,10 @@ import {SlLocationPin} from 'react-icons/sl'
 import {GrNext,GrPrevious} from 'react-icons/gr'
 import { fetchProducts } from '../../redux/slice/products'; 
 import { CircularProgress } from '@mui/material';
-import cartSlice, { addToCart, cartReducer, fetchCart, removeFromCart } from '../../redux/slice/cartSlice';
+import  { addToCart  } from '../../redux/slice/cartSlice';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51NwgeqSBSCB6xpqGPUKnUbvApp77lh7qlULBJBpPNm1Ut1N1EA0AQVpPmB3Ff3WjhHhc7x1vR9dIXCTFbYPZ7mKd00UWfjqp2x');
 
 
 const ProductDetails = () => {
@@ -23,6 +26,23 @@ const ProductDetails = () => {
   const user = auth.currentUser?.email
   const product = productDetails.data;
   const [selectedQuantity, setSelectedQuantity] = useState(1);
+
+  const handleBuyNow = async (e) => {
+    // When the customer clicks on the button, redirect them to Checkout.
+    const stripe = await stripePromise;
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [{
+        price: "price_1NwjUySBSCB6xpqGsRDxybg2", // Replace with the ID of your price
+        quantity:1
+      }],
+      mode: 'payment',
+      successUrl: 'http://localhost:3000/thankyou',
+      cancelUrl: 'https://example.com/cancel',
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+  };
 
   
 
@@ -286,7 +306,7 @@ const maxRating = 5;
                     borderRadius:"20px",
                     marginTop:"7px",
                     cursor:"pointer"
-                  }}>Buy Now</button>
+                  }} onClick={handleBuyNow}>Buy Now</button>
                 </div>
                 <div style={{color:"#007185",
                             display:"flex",

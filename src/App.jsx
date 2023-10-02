@@ -4,13 +4,10 @@ import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import SignIn from './components/Auth/SignIn'
 import SignUP from './components/Auth/SignUp'
-import { useEffect, useState } from 'react'
 import ProductDetails from './components/ProductDetails/ProductDetails'
 import Cart from './components/Cart/Cart'
-import { useDispatch } from 'react-redux'
-import { addToCart } from './redux/slice/cartSlice'
-// import {products} fro './Redux/slice'
-
+import Thankyou from './components/Thankyou.jsx/Thankyou'
+ 
 const App = () => {
   return (
           <Layout >
@@ -20,6 +17,7 @@ const App = () => {
               <Route path='/signIn' element={<SignIn />}/>
               <Route path='/signUp' element={<SignUP />} />
               <Route path='/cart' element={<Cart />}/> 
+              <Route path='/thankyou' element={<Thankyou />}/> 
                
             </Routes>
           </Layout>

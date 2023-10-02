@@ -3,12 +3,55 @@ import styles from './cart.module.css'
 import { removeFromCart } from '../../redux/slice/cartSlice'
 import { selectCartCount } from '../../store/store'
 import { Link } from 'react-router-dom'
+import { loadStripe } from '@stripe/stripe-js';
+import { useState } from 'react'
+ 
+// TEST CARD : SUCCESFULL PAYMENT - 4242 4242 4242 4242
+// TEST CARD : FAILED PAYMENT - 4000 0000 0000 0002
 
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+
+
+ 
+const stripePromise = loadStripe('pk_test_51NwgeqSBSCB6xpqGPUKnUbvApp77lh7qlULBJBpPNm1Ut1N1EA0AQVpPmB3Ff3WjhHhc7x1vR9dIXCTFbYPZ7mKd00UWfjqp2x');
+
+ 
 const Cart = () => {
    const cartItems = useSelector(state => state.cart)
    const dispatch = useDispatch()
    const cartCount = useSelector(selectCartCount);
+   const [loading,setLoading] = useState(false)
+   
+   
+   
 
+   const handleClick = async (e) => {
+    try {
+    setLoading(true);
+    // When the customer clicks on the button, redirect them to Checkout.
+    const stripe = await stripePromise;
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [{
+        price: "price_1NwjUySBSCB6xpqGsRDxybg2",  
+        quantity:1
+      }],
+      mode: 'payment',
+      successUrl: 'http://localhost:3000/thankyou',
+      cancelUrl: 'https://example.com/cancel',
+    });
+
+    if(error){
+      console.log('Error during payment',error)
+    }
+    }finally{
+      setLoading(false)
+    }
+     
+  };
+
+   
+   
    const calculateSubtotal = () => {
     return cartItems.reduce((total, item) => {
       const itemPrice = item.product.price.toFixed(0);
@@ -25,6 +68,7 @@ const Cart = () => {
 
    console.log(cartItems)
   return (
+      
     <>
       
          
@@ -40,7 +84,7 @@ const Cart = () => {
       
       {
             cartItems.map(item  => (
-            <li style={{display:"flex"}}>
+            <li style={{display:"flex"}} key={item.product.id}>
               <div className={styles.img}>
               <Link to={`/product/${item.product.id}`}>
                 <img src={item.product.image} alt="" />
@@ -104,7 +148,8 @@ const Cart = () => {
                     backgroundColor:"#FFD814",
                     border:"0px solid ",
                     borderRadius:"7px",
-                  }}  >Proceed to Buy</button>
+                    cursor:"pointer",
+                  }} onClick={handleClick} disabled={loading}>Proceed to Buy</button>
           </div>
             </>
           )}
@@ -115,8 +160,10 @@ const Cart = () => {
         
         
         </>
+        
        
     )
 }
 
+ 
 export default Cart
