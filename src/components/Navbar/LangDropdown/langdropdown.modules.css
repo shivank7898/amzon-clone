@@ -34,3 +34,10 @@
     
     background-color:white;
  }
+
+
+ @media (max-width: 425px) {
+    .lang{
+        display: none;
+    }
+ }

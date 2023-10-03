@@ -28,3 +28,23 @@
     padding-left: 70px;
     
 }
+
+
+@media (max-width: 425px) {
+    .mininav {
+        width:175%;
+        display: none;
+    }
+
+    .centerNav{
+        display: none;
+    }
+
+    .rghtNav{
+        display:none;
+    }
+
+    .lftNav{
+        display: none;
+    }
+}

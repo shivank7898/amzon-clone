@@ -164,4 +164,38 @@
 }
 
 
- 
+@media (max-width: 425px) {
+        .nav{
+            width:175%
+        }
+
+        .address{
+            display: none;
+        }
+
+        .image { 
+            width:15%;
+        }
+
+        .searchbox{
+            width:60%
+        }
+
+        .sign{
+
+        }
+
+        .rtrn{
+            display: none;
+        }
+
+        .searchbox select{
+            width: 15%;
+        }
+
+        .searchicon{
+            width: 15%;
+        }
+        
+
+}   
