@@ -14,10 +14,7 @@ const Conditionalnav = ({children}) => {
   return (
     <> 
         <Navbar />
-        <MiniNav />
-        
-         
-         
+        <MiniNav />      
     </>
   )
 }

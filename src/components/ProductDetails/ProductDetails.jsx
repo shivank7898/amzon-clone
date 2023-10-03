@@ -23,7 +23,6 @@ const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productdetails);
-  const user = auth.currentUser?.email
   const product = productDetails.data;
   const [selectedQuantity, setSelectedQuantity] = useState(1);
 

@@ -92,7 +92,7 @@ const SignUP = () => {
                         {/* {nameError && <p className={styles.nameError}>Field Required</p>} */}
                     </div>
                      <div >
-                        <label htmlFor="lstname">Last Name</label> <br />
+                        <label htmlFor="lstname">Last Name <span style={{color:"grey",fontWeight:"500"}}>(Optional)</span></label> <br />
                         <input id='lstname' type="text" placeholder=''  />
                     </div>
                     <div>

@@ -1,0 +1,124 @@
+/* Sidebar Container */
+.sidebar {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+/* Sidebar Title */
+.title {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Filter Sections */
+.filterSection {
+  margin-bottom: 20px;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Filter Options List */
+.filterOptions {
+  list-style: none;
+  padding: 0;
+}
+
+/* Filter Option */
+.filterOption {
+  margin-bottom: 8px;
+}
+
+/* Checkbox Label */
+.filterLabel {
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  text-align: center;
+  /* align-items: center; */
+}
+
+/* Checkbox Input */
+.filterLabel input[type="checkbox"] {
+  margin-right: 5x;
+  transform: translateY(1px);
+}
+
+/* Price Range Slider */
+.priceRange {
+  width: 100%;
+}
+
+/* Price Range Label */
+.priceValue {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Brand Dropdown */
+.select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* Apply Filters Button */
+.applyFiltersButton {
+  background-color: #FFD814;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.applyFiltersButton:hover {
+  background-color: #e58e00;
+}
+
+/* Reset Filters Button */
+.resetFiltersButton {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.resetFiltersButton:hover {
+  background-color: #bbb;
+}
+
+/* Additional Styling for Active Filters */
+.activeFilter {
+  background-color: #e5e5e5;
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin-right: 5px;
+}
+
+/* Add more CSS rules and styles as needed to match your design */

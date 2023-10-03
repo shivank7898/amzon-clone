@@ -1,8 +1,6 @@
 .carousel{
     width: 100%;
-    /* z-index: -1 ; */
-    /* height */
-    /* z-index: ; */
+    margin-top: 0px;
 }
 
 .carousel .image{
