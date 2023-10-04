@@ -130,7 +130,7 @@ box .cont1{
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .signInCont box{
         width: 80%;
     }

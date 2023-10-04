@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .productCards{
         display:flex;
         flex-direction: column;

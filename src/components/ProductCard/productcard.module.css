@@ -5,7 +5,7 @@
   color: #FFA41C;  
 }
 
-@media (max-width: 425px){
+@media (max-width: 768px){
   .card{
     background-color: #FFA41C;
     width: 90% !important;

@@ -327,7 +327,7 @@
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .prdctContainer{
         flex-direction:column ;
          padding: 0px;

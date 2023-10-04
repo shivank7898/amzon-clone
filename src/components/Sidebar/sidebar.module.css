@@ -123,7 +123,7 @@
 
 /* Add more CSS rules and styles as needed to match your design */
 
-@media (max-width: 425px){
+@media (max-width: 768px){
   .sidebar{
     display: none;
   }
