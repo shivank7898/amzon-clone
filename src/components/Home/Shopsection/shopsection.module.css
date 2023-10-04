@@ -68,7 +68,7 @@
 
 .card .rewards{
     padding-right: 9%;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     width: 100%;
 }
@@ -210,7 +210,9 @@
     width: 100%;
 }
  
- 
+.offerspan{
+    margin-left:10px;
+}
  
 
 .card button{     
@@ -245,7 +247,8 @@
     }
     
     .card{
-        width:100%
+        width:100%;
+        font-size: 19px;
     }
 
     .row3{
@@ -256,10 +259,29 @@
 
     .row3 img{
         width: 90%;
+        font-size: 19px;
 
     }
 
     .card2{
         width: 100%;
+    }
+
+    .offerspan{
+        margin:20px;
+    }
+
+    .card2 img{
+        
+    }
+
+    .card2 p{
+        font-size: 24px;
+
+    }
+
+    .card span{
+        display: inline-block;
+    font-size: 19px;
     }
 }

@@ -32,7 +32,7 @@
 
 @media (max-width: 425px) {
     .mininav {
-        width:175%;
+        width:100%;
         display: none;
     }
 

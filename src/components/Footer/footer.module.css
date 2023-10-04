@@ -38,3 +38,38 @@
 .footspan{
   color:grey;
 }
+
+
+
+@media (max-width: 425px){
+  .footer{
+    font-size: 8px;
+    /* padding: 2px; */
+  }
+
+  .footContainer{
+    width:100%;
+    padding: 0px 1px 30px;
+    margin-left: 10px;
+    gap: 30px;
+    
+  }
+
+  .line{
+    line-height: 25px;
+    font-size: 8px;
+  }
+
+  .footer .title{
+    display: inline-block;
+    font-size: 10px;
+  }
+
+
+  .footCond{
+    font-size: 10px;
+    margin: 0px;
+  }
+
+
+}

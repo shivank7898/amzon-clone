@@ -17,6 +17,7 @@ const ShopSection = ({ products }) => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 5,
+    // arrows:false,
     responsive: [
       {
         breakpoint: 1024,
@@ -28,7 +29,8 @@ const ShopSection = ({ products }) => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          prevArrow:false,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -71,7 +73,7 @@ return (
             <Link to='/shop'>
               <p>Get US $10 off</p>
               <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/November/Fuji_Dash_BXGY_1x._SY304_CB416796032_.jpg" alt="Basics" />
-              <span>Use code NZ10 on purchase</span>
+              <span className={styles.offerspan}>Use code NZ10 on purchase</span>
             </Link>
             </div>
             <div className={styles.card}>

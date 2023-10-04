@@ -73,11 +73,11 @@ const Cart = () => {
       
          
     
-    <div style={{display:"flex",gap:"1.4%" ,backgroundColor:"",width:"75%",margin:"20px 0px 0px 15% "}}>
+    <div className={styles.main} style={{display:"flex",gap:"1.4%" ,backgroundColor:"",width:"75%",margin:"20px 0px 0px 15% "}}>
       <div className={styles.cart}>
       <p style={{fontWeight:"500",fontSize:"25px", }}>Shopping Cart</p>
       {cartItems.length === 0 ? (
-            <p style={{fontSize:"30px",margin:"60px 0px 0px 430px",color:""}}>Your cart is empty.</p>
+            <p  className={styles.empty}style={{fontSize:"30px",margin:"60px 0px 0px 430px",color:""}}>Your cart is empty.</p>
           ) : (
             <> 
       <ul >
@@ -101,12 +101,12 @@ const Cart = () => {
                   <p style={{fontSize:"12px",color:"#217600",marginBottom:"5px"}}>In stock</p>
                   <p style={{fontSize:"12px",color:"#5F6060", marginBottom:"5px"}}>Eligible for free FREE Shipping</p>
                 </div>
-                  <div>
+                  <div className={styles.cartBottom}>
                     <input type="checkbox"  style={{width:"10px",marginTop:"26px",marginBottom:"10px"}}/>
 
                     <label htmlFor="gift" style={{fontSize:"14px",marginLeft:"5px"}}>This will be a gift. <span className={styles.learnMore}>Learn more</span></label>
 
-                    <div style={{display:"flex", gap:"10px"}} className={styles.infoBottom}>
+                    <div  style={{display:"flex", gap:"10px"}} className={styles.infoBottom}>
                       <p className={styles.quantity}>Qty:{item.quantity}</p>
                       <p onClick={() => handleRemove(item.product.id)}> Delete</p>
                       <p>Save for later</p>
@@ -121,7 +121,7 @@ const Cart = () => {
           } 
           </ul>
             <div>
-              <p style={{fontSize:"18px",padding:"12px",marginLeft:"76%"}}>Subtotal ({cartCount} item): <span style={{fontWeight:"600"}}>₹{calculateSubtotal()}.00</span></p>
+              <p className={styles.subtotal}style={{fontSize:"18px",padding:"12px",marginLeft:"76%"}}>Subtotal ({cartCount} item): <span style={{fontWeight:"600"}}>₹{calculateSubtotal()}.00</span></p>
             </div>
              </>
           )}

@@ -11,7 +11,7 @@ import {auth} from '../../firebase'
 import {SlLocationPin} from 'react-icons/sl'
 import {GrNext,GrPrevious} from 'react-icons/gr'
 import { fetchProducts } from '../../redux/slice/products'; 
-import { CircularProgress } from '@mui/material';
+// import { CircularProgress } from '@mui/material';
 import  { addToCart  } from '../../redux/slice/cartSlice';
 import { loadStripe } from '@stripe/stripe-js';
 

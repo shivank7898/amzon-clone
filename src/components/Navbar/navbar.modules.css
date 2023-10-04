@@ -11,6 +11,15 @@
     z-index: 111111;
 }
 
+.burger{
+    width: 10%;
+    display: none;
+}
+
+
+.burgerMenu{
+    display: none;
+}
 
 
 
@@ -44,13 +53,16 @@
  
 .image { 
     display: flex;
+    /* align-items: center; */
     width: 6%;
+    gap: 12px;
     padding:11px 0px 0px 12px;
     /* line-height: 0px; */
 
 }
 
-.image img{
+ 
+.image .logo{
     width:100%
     
 }
@@ -163,10 +175,17 @@
     /* margin-right: 12px; */
 }
 
+.burgerMenu {
+  display: none; /* Initially hide the burger menu */
+  ; /* Background color when the menu is shown */
+}
+        
+
 
 @media (max-width: 425px) {
         .nav{
-            width:175%
+            width:100%;
+            gap: 0;
         }
 
         .address{
@@ -174,15 +193,17 @@
         }
 
         .image { 
-            width:15%;
+            /* height: 120px; */
+            width:75%;
         }
 
         .searchbox{
-            width:60%
+            width:60%;
+            display:none;
         }
 
         .sign{
-
+            display: none;
         }
 
         .rtrn{
@@ -195,6 +216,26 @@
 
         .searchicon{
             width: 15%;
+        }
+
+        .cart{
+            width: 20%;
+            margin-left: 200px;
+        }
+
+
+
+        .burger{
+            margin-bottom:8px ;
+            width: 21%;
+            display: block;
+        }
+
+        .burgerMenu.show{
+            transition: 1s ease-in;
+            transform: translateX();
+            display: block;
+            background-color: #b5b3c4;
         }
         
 

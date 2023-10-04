@@ -1,12 +1,23 @@
-.card{
-    width:20%
-}
-
-.card img{
-    width:100%;
-}
+ 
 .star {
   font-size: 20px;
   margin-right: 2px;  
   color: #FFA41C;  
+}
+
+@media (max-width: 425px){
+  .card{
+    background-color: #FFA41C;
+    width: 90% !important;
+  }
+
+  .card img{
+    margin:0px 0px 10px 60px !important  ;
+    width:60% !important;
+    height: 100% !important;
+  }
+
+  .card .p{
+    margin-top: 20px;
+  }
 }

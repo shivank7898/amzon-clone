@@ -1,0 +1,7 @@
+@media (max-width: 425px) {
+    .productCards{
+        display:flex;
+        flex-direction: column;
+        /* width: 10%!important; */
+    }
+}

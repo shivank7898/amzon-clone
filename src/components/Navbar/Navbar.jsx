@@ -7,11 +7,26 @@ import { Link,useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux"
 import { auth } from "../../firebase";
 import { selectCartCount } from "../../store/store";
+import { useState } from "react";
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import { Divider, ListItemButton ,ListItemIcon } from '@mui/material'; 
+ 
 const Navbar = () => {
   const navigate = useNavigate()
   const name = useSelector((state) => state.name.name)
   const cartCount = useSelector(selectCartCount);
+   const [drawerOpen, setDrawerOpen] = useState(false);
 
+ const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
 
   const signOutUser = () => {
     console.log(auth.currentUser);
@@ -26,9 +41,42 @@ const Navbar = () => {
 
   return (
       <div className="nav">     
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)} style={{zIndex:"11111111111",}}>
+       <div style={{padding:"",width:"320px"}}>
+        <Link to={ !auth.currentUser ? "/signIn" : "" }>
+          <p style={{backgroundColor:"#232F3E",color:"#fff",padding:'15px',fontSize:"20px",fontWeight:"600",display:'flex',justifyContent:"space-between"}}>Hello, {auth.currentUser? name : "Guest"} <span onClick={toggleDrawer(false)}style={{paddingLeft:""}}>  x</span></p>
+        </Link>
+        <List>
+        {['Trending', 'Best Sellers', 'Amazon fire TV', 'Amazon music'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>      
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['Books', 'Music, Movies & Games', 'Computers', 'Electronics'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>      
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+       <ListItemButton>
+        {auth.currentUser? <p onClick={() => signOutUser()} style={{fontSize:"20px",fontWeight:"600"}}>Sign Out</p>: ""}
+        </ListItemButton>  
+      
+       </div>
+      </Drawer>
+       
+          <img src="../images/burger.png" alt=""  className="burger" onClick={toggleDrawer(true)} variant="contained"/>
         <div className="image">
       <Link to={'/'}>
-            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />     
+            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" className="logo"/>     
       </Link> 
         </div>
         

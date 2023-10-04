@@ -140,7 +140,7 @@
     gap: 6px;
 }
 
-.detailscontainer .cashbackcards .cards{
+  .cashbackcards .cards{
     width: 16%;
     border: 0px solid ;
     border-radius: 5px;
@@ -327,3 +327,50 @@
 }
 
 
+@media (max-width: 425px) {
+    .prdctContainer{
+        flex-direction:column ;
+         padding: 0px;
+         gap: 0px;  
+    }
+
+    .imagecontainer{
+        width: 40%;
+        margin-left: 140px;
+        
+    }
+
+    .detailscontainer{
+        width: 100%;
+        padding: 12px;
+    }
+
+    .png img{
+        width: 5%;
+    }
+
+    .cashbackcards{
+        width: 100%;
+        gap: 15px;
+        /* flex-direction: column; */
+    }
+    .cashbackcards .cards{
+        width: 30%;
+    }
+
+    .pricecontainer{
+        /* margin: 0px 12px -0px; */
+        border: 0px;
+        width: 100%;
+    }
+    
+    .perks img{
+        width: 80%;
+    }
+    .perks p{
+        display: none;
+    }
+
+    
+
+}

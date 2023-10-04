@@ -131,3 +131,24 @@ box .cont1{
 .nameError{
   font-size: 1px;
 }
+
+
+@media (max-width: 425px) {
+    .signInCont box{
+        width: 80%;
+    }
+
+    .signInCont .newCountBtn{
+        margin: 0;
+    }
+
+    .signInCont img{
+        width: 60%;
+        /* padding: 0; */
+    }
+
+    .signInCont .img{
+    padding-left: 30%;
+}
+
+}
